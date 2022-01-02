@@ -1,0 +1,29 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+.spinanim {
+    animation: spin 2s infinite linear;
+    display: inline-block;
+}
+
+/******* Anim Template ********
+@keyframes animation-name{
+    // Anim instructions
+}
+
+.element {
+    animation-name: move;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: paused
+}*/

@@ -1,0 +1,74 @@
+@import "reset.styl"
+@import "facesfonts.styl"
+@import "base.styl"
+@import "common.styl"
+@import "utils.styl"
+
+/*****************************************
+***                                    ***
+***                PAGE                ***
+***                                    ***
+******************************************/
+
+// -------------
+// Z-INDEX TABLE
+// -------------
+// #page: 100
+// #nav: 300
+// -------------
+
+/*****************************************
+***              DESKTOP               ***
+******************************************/
+$ratioh = 0.25
+$ratiom = 5
+$hstart = 2.75em
+$mstart = 40px
+
+for $i in 1..6
+    $sz = $hstart - ($i * $ratioh)
+    $mb = $mstart - ($i * $ratiom)
+    #main h{$i}
+        font-size: $sz
+        margin-bottom: $mb
+
+#page
+    padding 40px
+    sanserif()
+
+
+/*****************************************
+***               PHONE                ***
+******************************************/
+
+/*
+@media screen and (max-width: 768px), (max-width: 1024px)
+
+
+//*/
+
+/*
+@media screen and (max-width: 1024px)
+
+
+//*/
+
+/*
+@media screen and (max-width: 768px)
+    #header
+        grid-template-columns: auto
+        grid-template-rows: auto auto
+        gap: 20px 0px
+        padding: 25px
+//*/
+
+/*****************************************
+***               PRINT                ***
+******************************************/
+@css {
+@media print {
+    a[href]:after {
+        content: " (" attr(href) ") ";
+    }
+}
+}

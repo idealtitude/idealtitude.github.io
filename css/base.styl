@@ -1,0 +1,64 @@
+:root
+    --text-color: #1a1a1a
+    --background-color: #fefefe
+    --theme-primary: #140c39
+    --theme-secondary: #ff7f17
+    --theme-primary-alt: #2c2c81
+    --theme-secondary-alt: #ffcc4d
+    --theme-neutral: #e6e6e6
+    --theme-accent: #ffe37e
+    --theme-neutral-alt: #d1d1d1
+    --theme-accent-alt: #ccb976
+    --clWhite: #ffffff
+    --clBlack: #000000
+    --clGreyDark: #333333
+    --clGreyMed: #777777
+    --clGreyLight: #cccccc
+    --clBlue: #003f88
+    --clPink: #FF4476
+    --success: #99d259
+    --warning: #ffeb33
+    --info: #50a1f2
+    --alert: #c85b6b
+    --link-std: var(--clPink)
+    --link-visited: var(--clPink)
+    --link-hover: var(--clBlue)
+    --link-focus: var(--theme-neutral)
+    --link-active: var(--clGreyLight)
+
+@media screen and (prefers-reduced-motion: no-preference)
+    html:focus-within
+        scroll-behavior: smooth
+    *,
+    *::before,
+    *::after
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+
+body
+    background-color: var(--background-color)
+    color: var(--text-color)
+
+/*@media (prefers-color-scheme: dark)
+    color: var(--background-color)
+    background-color: var(--text-color)*/
+
+h1, h2, h3, h4, h5, h6
+    word-break: break-word
+    hyphens: auto
+
+a
+    &:link
+        color: var(--link-std)
+        /* outline: 0 */
+        text-decoration: none
+    &:visited
+        color: var(--link-visited)
+    &:hover
+        color: var(--link-hover)
+    &:focus
+        color: var(--link-focus)
+    &:active
+        color: var(--link-active)

@@ -1,0 +1,447 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  tab-size: 4;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 101%;
+}
+html {
+  font-size: 100%;
+  line-height: 1;
+}
+body {
+  font-size: 1.15em;
+  text-rendering: optimizeLegibility /* ou: text-rendering: optimizeSpeed */;
+}
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+abbr[title] {
+  cursor: help;
+  text-decoration: underline dotted;
+}
+dfn {
+  font-style: italic;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+em {
+  font-style: oblique;
+}
+i {
+  font-style: italic;
+}
+ins {
+  text-decoration-style: wavy;
+}
+del,
+s {
+  text-decoration-line: line-through;
+}
+a {
+  background-color: transparent;
+}
+@font-face {
+  font-family: 'Saira400';
+  src: url("../fonts/saira/saira-v6-latin-regular.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Source Code Pro400';
+  src: url("../fonts/source-code-pro/source-code-pro-v13-latin-regular.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Marck Script';
+  src: url("../fonts/marck-script/marck-script-v11-latin-regular.woff2") format('woff2');
+}
+:root {
+  --text-color: #1a1a1a;
+  --background-color: #fefefe;
+  --theme-primary: #140c39;
+  --theme-secondary: #ff7f17;
+  --theme-primary-alt: #2c2c81;
+  --theme-secondary-alt: #ffcc4d;
+  --theme-neutral: #e6e6e6;
+  --theme-accent: #ffe37e;
+  --theme-neutral-alt: #d1d1d1;
+  --theme-accent-alt: #ccb976;
+  --clWhite: #fff;
+  --clBlack: #000;
+  --clGreyDark: #333;
+  --clGreyMed: #777;
+  --clGreyLight: #ccc;
+  --clBlue: #003f88;
+  --clPink: #ff4476;
+  --success: #99d259;
+  --warning: #ffeb33;
+  --info: #50a1f2;
+  --alert: #c85b6b;
+  --link-std: var(--clPink);
+  --link-visited: var(--clPink);
+  --link-hover: var(--clBlue);
+  --link-focus: var(--theme-neutral);
+  --link-active: var(--clGreyLight);
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-break: break-word;
+  hyphens: auto;
+}
+a:link {
+  color: var(--link-std);
+/* outline: 0 */
+  text-decoration: none;
+}
+a:visited {
+  color: var(--link-visited);
+}
+a:hover {
+  color: var(--link-hover);
+}
+a:focus {
+  color: var(--link-focus);
+}
+a:active {
+  color: var(--link-active);
+}
+.spacer {
+  clear: both;
+}
+.clearfix {
+  display: block;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.floatright {
+  float: right;
+}
+.floatleft {
+  float: left;
+}
+.centered {
+  text-align: center;
+}
+.righted {
+  text-align: right;
+}
+.lefted {
+  text-align: left;
+}
+.justified {
+  text-align: justify;
+}
+.hidden {
+  display: none;
+}
+.sticky {
+  position: sticky;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.flexbox-centering {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+}
+.vhcentered {
+  display: grid;
+  place-content: center;
+}
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+.italic {
+  font-style: italic;
+}
+.wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  hyphens: auto;
+}
+.hellip {
+  text-overflow: ellipsis;
+}
+/*****************************************
+***                                    ***
+***                PAGE                ***
+***                                    ***
+******************************************/
+/*****************************************
+***              DESKTOP               ***
+******************************************/
+#main h1 {
+  font-size: 2.5em;
+  margin-bottom: 35px;
+}
+#main h2 {
+  font-size: 2.25em;
+  margin-bottom: 30px;
+}
+#main h3 {
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+#main h4 {
+  font-size: 1.75em;
+  margin-bottom: 20px;
+}
+#main h5 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+#main h6 {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+#page {
+  padding: 40px;
+  font-family: 'Saira400', Arial, Verdana, Helvetica, Tahoma, 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+/*****************************************
+***               PHONE                ***
+******************************************/
+/*
+@media screen and (max-width: 768px), (max-width: 1024px)
+
+
+//*/
+/*
+@media screen and (max-width: 1024px)
+
+
+//*/
+/*
+@media screen and (max-width: 768px)
+    #header
+        grid-template-columns: auto
+        grid-template-rows: auto auto
+        gap: 20px 0px
+        padding: 25px
+//*/
+/*****************************************
+***               PRINT                ***
+******************************************/
+
+@media print {
+  a[href]:after {
+      content: " (" attr(href) ") ";
+  }
+}

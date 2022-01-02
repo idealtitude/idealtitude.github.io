@@ -1,0 +1,65 @@
+fw($weight)
+    font-weight: $weight
+
+fs($size)
+    font-size: $size
+
+br($val)
+    border-radius: $val
+
+cl($color)
+    color: $color
+
+bg($color)
+    background-color: $color
+
+bgs()
+    background: arguments
+
+bgl($clr = #fff, $pos = 0% 0%, $size = auto, $rep = repeat, $clip = border-box, $origin = padding-box, $attach = scroll, $img = none)
+    background-color: $clr
+    background-position: $pos
+    background-size: $size
+    background-repeat: $rep
+    background-clip: $clip
+    background-origin: $origin
+    background-attachment: $attach
+    background-image: $img
+
+lgr($direction = to bottom, $colors...)
+    $fallback = $colors[0][0]
+    $colors = join(', ', $colors)
+    $colors = unquote($colors)
+    background-color: $fallback
+    background-image: linear-gradient($direction, $colors)
+
+rgr($shape = circle, $colors...)
+    fallback = $colors[0][0]
+    $colors = join(', ', $colors)
+    $colors = unquote($colors)
+    background-color: $fallback
+    background-image: radial-gradient($shape, $colors)
+
+bd()
+    border: arguments
+
+bxs()
+    box-shadow: arguments
+
+txs()
+    text-shadow: arguments
+
+margin()
+    margin: arguments
+
+padding()
+    padding: arguments
+
+transbg($bw, $pc)
+    background-color: rgba($bw, $bw, $bw, $pc)
+
+display($dis = block)
+    display: $dis
+
+position($pos = relative)
+    position: $pos
